@@ -1,0 +1,403 @@
+@import 'reset';
+@import 'variables';
+@import 'container';
+@import 'mix';
+
+@font-face {
+     font-family: "Socialico";
+     src: url("../fonts/Socialico.eot?") format("eot"), url("../fonts/Socialico.woff") format("woff"), url("../fonts/Socialico.ttf") format("truetype"), url("../fonts/Socialico.svg#Socialico") format("svg");
+     font-weight: normal;
+     font-style: normal;
+}
+
+.header {
+  background: #445162;
+  width: $width-section;
+  &__title {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+  }
+  &__list {
+    padding: 52px 0;
+    &-item {
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 36px;
+      padding: 0 0 20px 0;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+      .fa {
+        padding-right: 11px;
+      }
+    }
+  }
+  &__link-logo {
+    background: #fff;
+    float: right;
+    margin-top: 50px;
+    display: block;
+    width: 469px;
+    height: 214px;
+    .header__logo {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.about-product {
+  background: #fff;
+  padding: 50px 0;
+  width: $width-section;
+  &__title {
+     @include title-section();
+     padding: 0 0 30px 0;
+  }
+  &__paragraph {
+    @include text-section();
+    padding-bottom: 20px;
+  }
+  &__link-image {
+    background: #445161;
+    float: right;
+    height: 245px;
+    width: 430px;
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.dignity {
+  background: #f5f5f5;
+  width: $width-section; 
+  text-align: center;
+  padding: 50px 0;
+  &__title {
+    @include title-section();
+    padding-bottom: 30px;
+  }
+  &__details {
+    padding-bottom: 35px;
+    .paragraph {
+      @include text-section();
+      width: 90%;
+      float: left;
+      text-align: left;
+    }
+  }
+}
+
+.screen {
+  background: #fff;
+  width: $width-section; 
+  text-align: center;
+  padding: 50px 0;
+  &__title {
+    @include title-section();
+    padding-bottom: 35px;
+  }
+  &__item {
+    float: left;
+    padding-bottom: 30px;
+    width: 50%;
+    .screen__link {
+      background-color:  #445161;
+      float: left;
+      height: 150px;  
+      width: 200px;
+      .screen__img {
+        width: 100%;
+        height: 100%;
+      }     
+    }
+    .caption {
+       @include title-section();
+       font-size: 24px;
+       padding: 0 0 16px 15px;
+       float: left;
+    }
+    .screen__text {
+      @include text-section();
+      line-height: 20px;
+      margin: 28px 9px 0 215px;
+      text-align: left;
+    }
+  }  
+}
+
+.review {
+  background: #f5f5f5;
+  width: $width-section; 
+  text-align: center;
+  padding: 50px 0;
+  .review-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+  }
+  &__title {
+    @include title-section();
+    padding-bottom: 35px;
+  }
+  &__item {
+    padding-bottom: 24px;
+    width: 50%;
+    text-align: left;
+    .user-logo {
+      border-radius: 50%;
+      background: #445161;
+      background-image: url(../img/user.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 75px;
+      float: left;      
+      width: 75px;      
+    }
+    .review__block-text {
+      background: #ebebeb;
+      box-sizing: border-box;      
+      float: left;
+      font-family: Arial;      
+      font-size: 14px;
+      font-style: italic;
+      line-height: 18px;
+      text-align: left;      
+      margin-left: 28px; 
+      padding: 16px 20px 16px 16px;   
+      position: relative;       
+      width: 75%; 
+      &:before {
+        content: "";
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-right: 13px solid #ebebeb;
+        position: absolute;
+        top: 28px;
+        left: -13px;
+        // right: 0;
+        // bottom: 0;        
+        height: 0;
+        width: 0;
+      }
+      .review__text {
+        color:  #333333;        
+        float: left;        
+      }
+      .signa {
+        color:  #989898;
+        padding-top: 15px;
+        float: left;
+      }
+    }
+  }
+}
+
+.buy {
+  background: #fff;
+  width: $width-section; 
+  text-align: center;
+  padding: 50px 0;
+  .buy-flex {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;    
+  }
+  &__title {
+    @include title-section();
+    padding-bottom: 30px;
+  }
+  .buy-item {
+    background: #445162;
+    border-radius: 10px;
+    text-align: center;
+    &__name {
+      @include title-section();
+      color:  #fff;
+      font-size: 24px;
+      line-height: 30px;
+      padding: 16px 0;
+    }
+    &__price {
+      background: #fff;
+      border: 2px solid #445162;
+      @include title-section();
+      font-size: 40px;
+      line-height: 30px;
+      padding: 18px 0;
+    }
+    &__list {
+      @include text-section();
+      color: #fff;
+      font-size: 14px;
+      padding: 18px 20px;
+    }
+    &__button {
+      @include text-section();
+      background: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 18px;
+      margin: 21px 20px;
+      padding: 14px 0 13px 0;
+      text-decoration: none;
+      &:hover {
+        background: grey;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #445162;
+  max-width: $width-section; 
+  text-align: center;
+  padding: 50px 0 0 0;
+  &__title {
+    @include title-section();
+    color: #fff;
+    padding-bottom: 31px;
+  }
+  &__form {
+    float: left;
+    padding: 0 0 50px 104px;
+    width: 54%;
+    &-input {
+      @include text-section();
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color:  #ffffff;
+      color:  #445162;
+      margin-bottom: 22px;
+      padding: 6px 10px;      
+      width: 100%;
+    }
+    &-button {
+      @include text-section();
+      border-radius: 5px;
+      border:0;
+      box-sizing: border-box;
+      background:  #fff;
+      cursor: pointer;
+      color:  #445162;
+      font-weight: 700;
+      margin-bottom: 22px;
+      padding: 6px 10px;      
+      width: 140px;
+      &:hover {
+        background: #fff;
+      }
+    }    
+  }
+  &__info {
+      float: right;
+      padding-right: 104px;
+      text-align: left;
+      &-list {
+        padding-bottom: 11px;
+        &-item {
+          @include text-section();
+          color: #fff;
+          line-height: 26px;
+          padding: 0 0 21px 31px;
+          position: relative;
+          .icon {
+            background: url(../img/icon/soc-icon.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 26px;
+            width: 26px;
+          }
+          .skype-ico {
+            background-position: 0 0;
+            width: 24px;
+          }
+          .icq-ico {
+            background-position: -24px 0px;
+            width: 26px;
+          }
+          .email-ico {
+            background-position: -50px 0px;
+            width: 22px;
+            height: 24px;
+          }
+          .phone-ico {
+            background-position: -72px 0px;
+            width: 23px;
+            height: 24px;
+          }
+        }     
+      }
+      &-social {
+        .social-link{
+          font-family: Socialico;
+          color: #ffffff;
+          font-size: 60px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-decoration: none;
+        }
+      } 
+    }
+  &__copyright {
+    background: #f5f5f5;
+    font-family: Arial;
+    color:  #445162;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+// Detail and summary
+summary {
+  outline:0;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary:before {
+  background: #445161; 
+  content: "+"; 
+  color: #fff; 
+  float: left; 
+  font-size: 28px;
+  font-weight: bold; 
+  padding: 0; 
+  margin-right: 9px;
+  text-align: center; 
+  width: 32px;
+}
+
+details[open] summary:before {
+  content: "-";
+}
+
+.left-block {
+  float: left;
+  width: 50%;
+}
+
+.right-block {
+  float: right;
+  width: 50%;
+}
